@@ -1,0 +1,118 @@
+/* _content/teamManagment/Pages/Index.cshtml.rz.scp.css */
+
+< meta name = "viewport" content = "width=device-width, initial-scale=1" >
+< style >
+body[b-ixxmeto22b] { font - family: Arial, Helvetica, sans - serif; }
+form[b-ixxmeto22b] {border: 3px solid #f1f1f1;}
+
+input[type=text][b-ixxmeto22b], input[type = password][b-ixxmeto22b] {
+width: 100 %;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline - block;
+border: 1px solid #ccc;
+  box - sizing: border - box;
+}
+
+button[b-ixxmeto22b] {
+  background-color: #04AA6D;
+  color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100 %;
+}
+
+button: hover[b-ixxmeto22b] {
+opacity: 0.8;
+}
+
+.cancelbtn[b-ixxmeto22b] {
+  width: auto;
+padding: 10px 18px;
+background - color: #f44336;
+}
+
+.imgcontainer[b-ixxmeto22b] {
+  text-align: center;
+margin: 24px 0 12px 0;
+}
+
+img.avatar[b-ixxmeto22b] {
+    width: 40 %;
+    border - radius: 50 %;
+}
+body img[b-ixxmeto22b] {
+    width: 100px;
+    height:100px;
+}
+
+.container[b-ixxmeto22b] {
+  padding: 16px;
+}
+
+span.psw[b-ixxmeto22b] {
+    float: right;
+    padding - top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw[b-ixxmeto22b] {
+    display: block;
+        float: none;
+    }
+  .cancelbtn[b-ixxmeto22b] {
+    width: 100 %;
+    }
+}
+/* _content/teamManagment/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-yp4l34lvi7] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-yp4l34lvi7] {
+  color: #0077cc;
+}
+
+.btn-primary[b-yp4l34lvi7] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-yp4l34lvi7], .nav-pills .show > .nav-link[b-yp4l34lvi7] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-yp4l34lvi7] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-yp4l34lvi7] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-yp4l34lvi7] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-yp4l34lvi7] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-yp4l34lvi7] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
