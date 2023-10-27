@@ -9,45 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = teamManagment
 build_property.RootNamespace = teamManagment
-build_property.ProjectDir = C:\Users\Opilane\source\repos\teamManagment\
+build_property.ProjectDir = C:\Users\ER\Documents\GitHub\projectManagement\teamManagment\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Opilane\source\repos\teamManagment
+build_property.MSBuildProjectDirectory = C:\Users\ER\Documents\GitHub\projectManagement\teamManagment
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Opilane/source/repos/teamManagment/Pages/Error.cshtml]
+[C:/Users/ER/Documents/GitHub/projectManagement/teamManagment/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Opilane/source/repos/teamManagment/Pages/Login.cshtml]
+[C:/Users/ER/Documents/GitHub/projectManagement/teamManagment/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Opilane/source/repos/teamManagment/Pages/Privacy.cshtml]
+[C:/Users/ER/Documents/GitHub/projectManagement/teamManagment/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Opilane/source/repos/teamManagment/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ER/Documents/GitHub/projectManagement/teamManagment/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Opilane/source/repos/teamManagment/Pages/Web.cshtml]
+[C:/Users/ER/Documents/GitHub/projectManagement/teamManagment/Pages/Web.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2ViLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Opilane/source/repos/teamManagment/Pages/_ViewImports.cshtml]
+[C:/Users/ER/Documents/GitHub/projectManagement/teamManagment/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Opilane/source/repos/teamManagment/Pages/_ViewStart.cshtml]
+[C:/Users/ER/Documents/GitHub/projectManagement/teamManagment/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Opilane/source/repos/teamManagment/Pages/Index.cshtml]
+[C:/Users/ER/Documents/GitHub/projectManagement/teamManagment/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ixxmeto22b
 
-[C:/Users/Opilane/source/repos/teamManagment/Pages/Shared/_Layout.cshtml]
+[C:/Users/ER/Documents/GitHub/projectManagement/teamManagment/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yp4l34lvi7
