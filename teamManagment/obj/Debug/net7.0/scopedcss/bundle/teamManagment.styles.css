@@ -116,3 +116,29 @@ button.accept-policy[b-yp4l34lvi7] {
   white-space: nowrap;
   line-height: 60px;
 }
+/* _content/teamManagment/Pages/Web.cshtml.rz.scp.css */
+.container-cr[b-y6hi31ujqs] {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    background-color: blueviolet;
+    text-align: center;
+}
+
+h1[b-y6hi31ujqs] {
+    font-size: 34px;
+    color: white;
+}
+
+.m[b-y6hi31ujqs] {
+    position: absolute;
+    top: 170px;
+    padding: 10px;
+    margin-left: 35%;
+    margin-right: 30%;
+    max-width: 40%;
+    background-color: aqua;
+    text-align: center;
+}

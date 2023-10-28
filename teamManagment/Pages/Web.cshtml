@@ -2,3 +2,51 @@
 @model teamManagment.Pages.webModel
 @{
 }
+
+
+<div class="container-cr">
+    <h1>Create a new project!</h1>
+</div>
+<div class="m">
+    <form>
+        <table>
+            <tr>
+                <td>Project name:</td>
+                <td><input type="text" name="ProjectName"></td>
+            </tr>
+
+            <tr>
+                <td>Project members:</td>
+                <td><input type="text" name="Members"></td>
+            </tr>
+
+            <tr>
+                <td>Deadline:</td>
+                <td><input type="date" name="Deadline"></td>
+            </tr>
+
+            <tr>
+                <td>Budget:</td>
+                <td><input type="number" name="Budget"></td>
+                <td>
+                    <select>
+                        <option>$</option>
+                        <option>€</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Cost per hour:</td>
+                <td><input type="number" name="Cost"></td>
+                <td>
+                    <select>
+                        <option>$</option>
+                        <option>€</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="submit" autofocus onclick="alert('Project was succesfully made!')">Create</button>
+    </form>
+</div>

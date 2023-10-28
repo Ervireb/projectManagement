@@ -60,3 +60,4 @@ C:\Users\ER\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\re
 C:\Users\ER\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.pdb
 C:\Users\ER\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.genruntimeconfig.cache
 C:\Users\ER\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\ref\teamManagment.dll
+C:\Users\ER\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\scopedcss\Pages\Web.cshtml.rz.scp.css
