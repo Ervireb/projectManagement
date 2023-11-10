@@ -5,16 +5,12 @@
       "PackagePath": "staticwebassets\\teamManagment.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\Images\\-cat.jpg",
+      "PackagePath": "staticwebassets\\Images\\-cat.jpg"
+    },
+    {
       "Id": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\Images\\cat.jpg",
       "PackagePath": "staticwebassets\\Images\\cat.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\Images\\cat.png",
-      "PackagePath": "staticwebassets\\Images\\cat.png"
-    },
-    {
-      "Id": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\cat.jpg",
-      "PackagePath": "staticwebassets\\cat.jpg"
     },
     {
       "Id": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\css\\site.css",

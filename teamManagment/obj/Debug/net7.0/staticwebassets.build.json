@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KB5+ztlZIpM4ngD+HPcyRbkQRaObzGrGBClfrNlVNIQ=",
+  "Hash": "BMCAP12rdC2ylMcCVtyQV6TmGuDDNSbLDDz8AwuZdMM=",
   "Source": "teamManagment",
   "BasePath": "_content/teamManagment",
   "Mode": "Default",
@@ -49,23 +49,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\teamManagment.bundle.scp.css"
-    },
-    {
-      "Identity": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\cat.jpg",
-      "SourceId": "teamManagment",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\",
-      "BasePath": "_content/teamManagment",
-      "RelativePath": "cat.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\cat.jpg"
     },
     {
       "Identity": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\css\\site.css",
@@ -119,12 +102,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\cat.jpg"
     },
     {
-      "Identity": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\Images\\cat.png",
+      "Identity": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\Images\\-cat.jpg",
       "SourceId": "teamManagment",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\",
       "BasePath": "_content/teamManagment",
-      "RelativePath": "Images/cat.png",
+      "RelativePath": "Images/-cat.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +116,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\cat.png"
+      "OriginalItemSpec": "wwwroot\\Images\\-cat.jpg"
     },
     {
       "Identity": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\js\\site.js",
