@@ -1,12 +1,20 @@
 # projectManagement
-2
+some text about us.
 
-![ques](https://github.com/Ervireb/projectManagement/assets/77449663/3f71509d-26ec-4074-9799-debb80787c5e)
+##
+<pre>
+<span color="yellow"><b>TO DO:</b></span>
+<br />
+1. Первая задача
+   - Подзадача 1
+   - Подзадача 2
 
-![govno](https://cdn.discordapp.com/attachments/1154727104257208401/1164869040041373758/image.png)
-![cookie](https://cdn.discordapp.com/attachments/1154727104257208401/1164869040041373758/image.png?ex=6544c7d5&is=653252d5&hm=62388ad9f09943176ac681c6fb68d75eb9ce7ceee1ba7b6d5cd82b0e5643fa58& )
+</pre>
+![gitD](https://cdn.discordapp.com/attachments/1154727104257208401/1164869040041373758/image.png)
 
 
 
-
- 
+##
+1. First list item
+   - First nested list item
+     - Second nested list item
