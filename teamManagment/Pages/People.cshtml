@@ -4,3 +4,219 @@
     ViewData["Title"] = "People";
 }
 <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<style>
+.box {
+    position: relative;
+    min-width: 925px;
+    background: #5B9A8B;
+    padding: 20px;
+    box-shadow: 0 10px 30px #445069;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    background: #fff;
+}
+
+.box h3 {
+    position: relative;
+    color: #252B48;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding-left: 70px;
+}
+
+.box .list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.box .list::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #5B9A8B;
+    transition: transform 0.2s;
+    transform: scaleX(0);
+    transform-origin: inherit;
+}
+
+.box .list:hover::before {
+    transition: transform 0.2s;
+    transform: scaleX(1);
+    transform-origin: inherit;
+}
+
+.box .list .imgBx {
+    position: relative;
+    min-width: 70px;
+    height: 70px;
+    background: #fff;
+    overflow: hidden;
+    border: 6px solid #fff;
+    border-radius: 100%;
+    box-shadow: 5px 5px 15px #445069;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.box .list .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box .list .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    color: #252B48;
+}
+
+.box .list .content .rank {
+    position: absolute;
+    right: 0;
+    font-size: 1.3em;
+    text-align: end;
+    color: #000000;
+    transform: scale(0.75);
+    transition: 0.2s;
+}
+
+.box .list:hover .content .rank {
+    transform: scale(0.75);
+}
+
+.box .list .content h4 {
+    font-weight: 600;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.box .list .content p {
+    opacity: 0.85;
+    transition: 0.2s;
+}
+
+.box .list:hover .content h4,
+.box .list:hover .content p {
+    color: #fff;
+}
+
+.Active {
+    font-size: 0.75em;
+}
+</style>
+
+<p>Fake people list</p><br />
+<p>Картинки не работают :(</p>
+
+<body>
+    <section>
+        <div class="box">
+            <h3>Contacts</h3>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="~/Images/ded.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="rank">
+                        <p>PHONE: +372 57997439</p>
+                        <p>EMAIL: jan.bal@email.com</p>
+                    </h2>
+                    <h4>Jan Ballard</h4>
+                    <p>Front-end Developer</p>
+                    <h4 class="Active">Last Active: 22-11-2023 08:55</h4>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="~/Images/girl.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="rank">
+                        <p>PHONE: +372 56645563</p>
+                        <p>EMAIL: marie.pierce@email.com</p>
+                    </h2>
+                    <h4>Marie Pierce</h4>
+                    <p>Back-end Developer</p>
+                    <h4 class="Active">Last Active: 21-11-2023 16:37</h4>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="~/Images/glasses.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="rank">
+                        <p>PHONE: +372 58128879</p>
+                        <p>EMAIL: romanburch@email.com</p>
+                    </h2>
+                    <h4>Roman Burch</h4>
+                    <p>Tester</p>
+                    <h4 class="Active">Last Active: 27-09-2023 11:17</h4>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="~/Images/pacan.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="rank">
+                        <p>PHONE: +372 57263521</p>
+                        <p>EMAIL: slitherin@email.com</p>
+                    </h2>
+                    <h4>Garret Salazar</h4>
+                    <p>Digital Artist</p>
+                    <h4 class="Active">Last Active: 18-11-2023 08:33</h4>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgBx">
+                    <img src="~/Images/photo.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="rank">
+                        <p>PHONE: +372 51489854</p>
+                        <p>EMAIL: chaoji@email.com</p>
+                    </h2>
+                    <h4>Chaohui Jing</h4>
+                    <p>Illustrator Designer</p>
+                    <h4 class="Active">Last Active: 20-11-2023 02:11</h4>
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="imgBx">
+                    <img src="~/Images/bw.jpg">
+                </div>
+                <div class="content">
+                    <h2 class="rank">
+                        <p>PHONE: +372 55221538</p>
+                        <p>EMAIL: mmorales@email.com</p>
+                    </h2>
+                    <h4>Meagan Morales</h4>
+                    <p>Software Developer</p>
+                    <h4 class="Active">Last Active: 20-11-2023 05:12</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
