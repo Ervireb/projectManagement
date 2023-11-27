@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using teamManagment.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<teamManagmentContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("teamManagmentContext") ?? throw new InvalidOperationException("Connection string 'teamManagmentContext' not found.")));
 
 var app = builder.Build();
 
