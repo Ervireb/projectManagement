@@ -24,6 +24,16 @@
                 <span asp-validation-for="Project.Owner" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Project.Members" class="control-label"></label>
+                <input asp-for="Project.Members" class="form-control" />
+                <span asp-validation-for="Project.Members" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Project.Start" class="control-label"></label>
+                <input asp-for="Project.Start" class="form-control" />
+                <span asp-validation-for="Project.Start" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Project.Deadline" class="control-label"></label>
                 <input asp-for="Project.Deadline" class="form-control" />
                 <span asp-validation-for="Project.Deadline" class="text-danger"></span>

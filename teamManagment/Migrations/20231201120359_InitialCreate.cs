@@ -19,6 +19,8 @@ namespace teamManagment.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Owner = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Members = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Start = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Deadline = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Budget = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     CostPerHour = table.Column<decimal>(type: "decimal(18,2)", nullable: false)

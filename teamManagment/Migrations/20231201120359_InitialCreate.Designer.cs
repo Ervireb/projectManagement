@@ -12,7 +12,7 @@ using teamManagment.Data;
 namespace teamManagment.Migrations
 {
     [DbContext(typeof(teamManagmentContext))]
-    [Migration("20231127093046_InitialCreate")]
+    [Migration("20231201120359_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -42,11 +42,17 @@ namespace teamManagment.Migrations
                     b.Property<DateTime>("Deadline")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Members")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Owner")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Start")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
