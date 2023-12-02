@@ -14,5 +14,6 @@ namespace teamManagment.Models
         public DateTime Deadline { get; set; }
         public decimal Budget { get; set; }
         public decimal CostPerHour { get; set; }
+        public string? Tasks { get; set; }
     }
 }

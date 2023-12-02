@@ -6,7 +6,11 @@ some text about us.
 <span color="yellow"><b>TO DO:</b></span>
 <br />
 
-   
+   ERVIN
+   - добавить Элмнт Tasks в Project.db
+
+
+
 2. databases
    - accounts
    - projects
