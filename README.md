@@ -8,6 +8,7 @@ some text about us.
 
    ERVIN
    - добавить Элмнт Tasks в Project.db
+   - читать книгу-по-контроллерам(https://learn.microsoft.com/ru-ru/aspnet/core/mvc/models/model-binding?view=aspnetcore-8.0)
 
 
 
