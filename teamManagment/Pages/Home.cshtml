@@ -1,0 +1,97 @@
+﻿@page
+@model teamManagment.Pages.HomeModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .team-member {
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .team-member:hover {
+                transform: scale(1.05);
+            }
+
+            .team-member img {
+                width: 100%;
+                max-width: 150px;
+                height: auto;
+                border-radius: 50%;
+                display: block;
+                margin: 0 auto 15px;
+            }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Meet Our Awesome Team</h1>
+    </header>
+
+    <section>
+        <div class="team-member">
+            <img src="https://picsum.photos/150" alt="Team Member 1">
+            <h2>John Doe</h2>
+            <p>Passionate Project Manager with a knack for problem-solving and strategic planning. Loves hiking and exploring new technologies.</p>
+        </div>
+
+        <div class="team-member">
+            <img src="https://picsum.photos/150" alt="Team Member 2">
+            <h2>Jane Smith</h2>
+            <p>Creative Developer with a keen eye for detail. Enjoys turning complex problems into elegant solutions. Coffee addict and coding enthusiast.</p>
+        </div>
+
+        <div class="team-member">
+            <img src="https://picsum.photos/150" alt="Team Member 3">
+            <h2>Alice Johnson</h2>
+            <p>Marketing Guru who excels in creating engaging content. Enthusiastic about building strong relationships with clients. Avid reader and traveler.</p>
+        </div>
+    </section>
+
+</body>
+</html>

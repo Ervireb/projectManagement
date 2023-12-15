@@ -4,50 +4,129 @@
     ViewData["Title"] = "NewProject";
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-<div class="container-cr">
-    <h1>Create a new project!</h1>
-</div>
-<div class="m">
-    <form>
-        <table>
-            <tr>
-                <td>Project name:</td>
-                <td><input type="text" name="ProjectName"></td>
-            </tr>
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
 
-            <tr>
-                <td>Project members:</td>
-                <td><input type="text" name="Members"></td>
-            </tr>
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
 
-            <tr>
-                <td>Deadline:</td>
-                <td><input type="date" name="Deadline"></td>
-            </tr>
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
 
-            <tr>
-                <td>Budget:</td>
-                <td><input type="number" name="Budget"></td>
-                <td>
-                    <select>
-                        <option>$</option>
-                        <option>€</option>
-                    </select>
-                </td>
-            </tr>
+        #projectList {
+            margin-top: 20px;
+        }
 
-            <tr>
-                <td>Cost per hour:</td>
-                <td><input type="number" name="Cost"></td>
-                <td>
-                    <select>
-                        <option>$</option>
-                        <option>€</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <button type="submit" autofocus onclick="alert('Project was succesfully made!')">Create</button>
+            #projectList div {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("projectForm");
+            const projectList = document.getElementById("projectList");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const projectName = document.getElementById("projectName").value;
+                const projectMembers = document.getElementById("projectMembers").value;
+                const projectStart = document.getElementById("projectStart").value;
+                const projectDeadline = document.getElementById("projectDeadline").value;
+                const projectBudget = document.getElementById("projectBudget").value;
+                const costPerHour = document.getElementById("costPerHour").value;
+
+                const projectInfo = {
+                    name: projectName,
+                    members: projectMembers,
+                    start: projectStart,
+                    deadline: projectDeadline,
+                    budget: projectBudget,
+                    costPerHour: costPerHour,
+                };
+
+                // Save project information to local storage
+                let projects = JSON.parse(localStorage.getItem("projects")) || [];
+                projects.push(projectInfo);
+                localStorage.setItem("projects", JSON.stringify(projects));
+
+                // Display project in the list
+                displayProjects();
+            });
+
+            function displayProjects() {
+                projectList.innerHTML = "";
+                const projects = JSON.parse(localStorage.getItem("projects")) || [];
+
+                projects.forEach((project, index) => {
+                    const projectDiv = document.createElement("div");
+                    projectDiv.innerHTML = `<strong>${project.name}</strong><br>
+                                                           Members: ${project.members}<br>
+                                                           Start: ${project.start}<br>
+                                                           Deadline: ${project.deadline}<br>
+                                                           Budget: ${project.budget}<br>
+                                                           Cost Per Hour: ${project.costPerHour}<br>`;
+                    projectList.appendChild(projectDiv);
+                });
+            }
+
+            // Initial display of projects
+            displayProjects();
+        });
+    </script>
+</head>
+<body>
+    <form id="projectForm">
+        <label for="projectName">Project Name:</label>
+        <input type="text" id="projectName" required>
+
+        <label for="projectMembers">Project Members:</label>
+        <input type="text" id="projectMembers" required>
+
+        <label for="projectStart">Project Start:</label>
+        <input type="date" id="projectStart" required>
+
+        <label for="projectDeadline">Project Deadline:</label>
+        <input type="date" id="projectDeadline" required>
+
+        <label for="projectBudget">Budget:</label>
+        <input type="number" id="projectBudget" required>
+
+        <label for="costPerHour">Cost Per Hour:</label>
+        <input type="number" id="costPerHour" required>
+
+        <button type="submit">Create Project</button>
     </form>
-</div>
+
+    <div id="projectList">
+        <!-- Project information will be displayed here -->
+    </div>
+</body>
+</html>

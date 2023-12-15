@@ -22,7 +22,7 @@ public static class SeedData
             context.Project.AddRange(
                 new Project
                 {
-                    Name = "PoopyLand",
+                    Name = "default",
                     Owner = "Lemira",
                     Members = "all",
                     Start = DateTime.Parse("2012-2-12"),

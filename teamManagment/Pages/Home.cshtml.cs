@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace teamManagment.Pages
 {
-    public class ProjectsModel : PageModel
+    public class HomeModel : PageModel
     {
         public void OnGet()
         {

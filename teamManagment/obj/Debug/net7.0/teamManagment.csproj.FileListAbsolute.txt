@@ -330,7 +330,6 @@ C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7
 C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.RazorAssemblyInfo.cache
 C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.RazorAssemblyInfo.cs
-C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.sourcelink.json
 C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\staticwebassets\msbuild.teamManagment.Microsoft.AspNetCore.StaticWebAssets.props
