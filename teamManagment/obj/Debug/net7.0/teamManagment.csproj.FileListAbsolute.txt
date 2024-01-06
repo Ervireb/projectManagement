@@ -1049,3 +1049,4 @@ C:\Users\Kirsikas\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net
 C:\Users\Kirsikas\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Kirsikas\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.csproj.AssemblyReference.cache
 C:\Users\Kirsikas\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.csproj.CopyComplete
+C:\Users\ER\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.sourcelink.json

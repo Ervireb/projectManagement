@@ -15,10 +15,10 @@ public static class SeedData
                 DbContextOptions<teamManagmentContext>>()))
         {
             // Look for any Projects.
-            if (context.Project.Any())
-            {
-                return;   // DB has been seeded
-            }
+
+            //if (context.Project.Any())            // ER - у меня ломается
+            //{ return;   // DB has been seeded
+            //}
             context.Project.AddRange(
                 new Project
                 {
