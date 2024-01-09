@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sslE4wzsBB6Y22fXgqfo45qDoNz+4j1johmXZHjvq4E=",
+  "Hash": "0libPV4H7KgiAw3oRel4g5UqmX+IBtPb8D/Ks7pvpg0=",
   "Source": "teamManagment",
   "BasePath": "_content/teamManagment",
   "Mode": "Default",
@@ -129,25 +129,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\cat.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\Images\\-cat.jpg",
-      "SourceId": "teamManagment",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\",
-      "BasePath": "_content/teamManagment",
-      "RelativePath": "Images/-cat.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\-cat.jpg"
     },
     {
       "Identity": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\wwwroot\\Images\\ded.jpg",

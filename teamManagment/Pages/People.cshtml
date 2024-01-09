@@ -4,127 +4,127 @@
     ViewData["Title"] = "People";
 }
 <style>
-.box {
-    position: relative;
-    min-width: 925px;
-    background: #04AA6D;
-    padding: 20px;
-    box-shadow: 0 10px 30px #445069;
-}
+    .box {
+        position: relative;
+        min-width: 925px;
+        background: #0A6;
+        padding: 20px;
+        box-shadow: 0 10px 30px #457;
+    }
 
-.box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(100% - 75px);
-    height: 100%;
-    background: #fff;
-}
+    .box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100% - 75px);
+        height: 100%;
+        background: #fff;
+    }
 
-.box h3 {
-    position: relative;
-    color: #252B48;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    padding-left: 70px;
-}
+    .box h3 {
+        position: relative;
+        color: #224;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        padding-left: 70px;
+    }
 
-.box .list {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin: 10px 0;
-    cursor: pointer;
-}
+    .box .list {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin: 10px 0;
+        cursor: pointer;
+    }
 
-.box .list::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #04AA6D;
-    transition: transform 0.2s;
-    transform: scaleX(0);
-    transform-origin: inherit;
-}
+    .box .list::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #0A6;
+        transition: transform 0.2s;
+        transform: scaleX(0);
+        transform-origin: inherit;
+    }
 
-.box .list:hover::before {
-    transition: transform 0.2s;
-    transform: scaleX(1);
-    transform-origin: inherit;
-}
+    .box .list:hover::before {
+        transition: transform 0.2s;
+        transform: scaleX(1);
+        transform-origin: inherit;
+    }
 
-.box .list .imgBx {
-    position: relative;
-    min-width: 70px;
-    height: 70px;
-    background: #fff;
-    overflow: hidden;
-    border: 6px solid #fff;
-    border-radius: 100%;
-    box-shadow: 5px 5px 15px #445069;
-    margin-right: 20px;
-    margin-left: 10px;
-}
+    .box .list .imgBx {
+        position: relative;
+        min-width: 70px;
+        height: 70px;
+        background: #fff;
+        overflow: hidden;
+        border: 6px solid #fff;
+        border-radius: 100%;
+        box-shadow: 5px 5px 15px #457;
+        margin-right: 20px;
+        margin-left: 10px;
+    }
 
-.box .list .imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .box .list .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-.box .list .content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    color: #252B48;
-}
+    .box .list .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        color: #234;
+    }
 
-.box .list .content .rank {
-    position: absolute;
-    right: 0;
-    font-size: 1.3em;
-    text-align: end;
-    color: #000000;
-    transform: scale(0.75);
-    transition: 0.2s;
-}
+    .box .list .content .rank {
+        position: absolute;
+        right: 0;
+        font-size: 1.3em;
+        text-align: end;
+        color: #000;
+        transform: scale(0.75);
+        transition: 0.2s;
+    }
 
-.box .list:hover .content .rank {
-    transform: scale(0.75);
-}
+    .box .list:hover .content .rank {
+        transform: scale(0.75);
+    }
 
-.box .list .content h4 {
-    font-weight: 600;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    transition: 0.2s;
-}
+    .box .list .content h4 {
+        font-weight: 600;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        transition: 0.2s;
+    }
 
-.box .list .content p {
-    opacity: 0.85;
-    transition: 0.2s;
-}
+    .box .list .content p {
+        opacity: 0.85;
+        transition: 0.2s;
+    }
 
-.box .list:hover .content h4,
-.box .list:hover .content p {
-    color: #fff;
-}
+    .box .list:hover .content h4,
+    .box .list:hover .content p {
+        color: #fff;
+    }
 
-.Active {
-    font-size: 0.75em;
-}
+    .Active {
+        font-size: 0.75em;
+    }
 </style>
 
-<p>Fake people list</p><br />
-
+<!--<p>Fake people list</p><br />
+-->
 <body>
     <section>
         <div class="box">
