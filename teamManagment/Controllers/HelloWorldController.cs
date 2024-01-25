@@ -8,7 +8,6 @@ namespace teamManagment.Controllers
     {
         // 
         // GET: /HelloWorld/
-        [Authorize]
         public string Index()
         {
             return "This is my default action...";
