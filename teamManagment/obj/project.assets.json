@@ -11944,19 +11944,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\opilane\\.nuget\\packages\\": {}
+    "C:\\Users\\ER\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\opilane\\Documents\\GitHub\\projectManagement\\teamManagment\\teamManagment.csproj",
+      "projectUniqueName": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\teamManagment.csproj",
       "projectName": "teamManagment",
-      "projectPath": "C:\\Users\\opilane\\Documents\\GitHub\\projectManagement\\teamManagment\\teamManagment.csproj",
-      "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\opilane\\Documents\\GitHub\\projectManagement\\teamManagment\\obj\\",
+      "projectPath": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\teamManagment.csproj",
+      "packagesPath": "C:\\Users\\ER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ER\\Documents\\GitHub\\projectManagement\\teamManagment\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\opilane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12028,7 +12032,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
