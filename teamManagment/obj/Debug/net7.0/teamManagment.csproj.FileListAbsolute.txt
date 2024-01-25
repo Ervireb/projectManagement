@@ -1050,3 +1050,12 @@ C:\Users\Kirsikas\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net
 C:\Users\Kirsikas\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.csproj.AssemblyReference.cache
 C:\Users\Kirsikas\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.csproj.CopyComplete
 C:\Users\ER\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.sourcelink.json
+C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\opilane\Documents\GitHub\projectManagement\teamManagment\obj\Debug\net7.0\teamManagment.MvcApplicationPartsAssemblyInfo.cs

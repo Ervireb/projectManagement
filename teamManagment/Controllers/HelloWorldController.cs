@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 
 namespace teamManagment.Controllers
@@ -7,6 +8,7 @@ namespace teamManagment.Controllers
     {
         // 
         // GET: /HelloWorld/
+        [Authorize]
         public string Index()
         {
             return "This is my default action...";
