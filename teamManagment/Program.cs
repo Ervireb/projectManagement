@@ -43,4 +43,16 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+#if (DEBUG)
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<teamManagmentContext>();
+    dbContext.Database.EnsureCreated();
+
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+    SeedData.Initialize(scope.ServiceProvider);
+}
+#endif
+
 app.Run();

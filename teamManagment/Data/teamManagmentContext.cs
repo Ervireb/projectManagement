@@ -14,6 +14,6 @@ namespace teamManagment.Data
             : base(options)
         {
         }
-        public DbSet<teamManagment.Models.Project> Project { get; set; } = default!;
+        public DbSet<Project> Project { get; set; } = default!;
     }
 }

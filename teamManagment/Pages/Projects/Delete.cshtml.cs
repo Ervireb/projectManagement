@@ -53,7 +53,7 @@ namespace teamManagment.Pages.Projects
             if (project != null)
             {
                 Project = project;
-                _context.Project.Remove(Project);
+                _context.Project.Remove(project);
                 await _context.SaveChangesAsync();
             }
 
