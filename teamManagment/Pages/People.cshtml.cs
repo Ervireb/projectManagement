@@ -5,9 +5,11 @@ using System.Drawing;
 using System.Reflection;
 using System.Xml.Linq;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace teamManagment.Pages
 {
+    [Authorize]
     public class loginModel : PageModel
     {
         public void OnGet()
