@@ -9,19 +9,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ... Your existing HTML and CSS ... -->
+
     <style>
         form {
             max-width: 400px;
             margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px; /* Adjust the value to control the roundness */
         }
 
-        input, select {
+        input {
             width: 100%;
             padding: 10px;
             margin: 8px 0;
             display: inline-block;
             border: 1px solid #ccc;
             box-sizing: border-box;
+            border-radius: 5px; /* Adjust the value to control the roundness */
         }
 
         button {
@@ -31,7 +37,13 @@
             border: none;
             cursor: pointer;
             width: 100%;
+            border-radius: 5px; /* Adjust the value to control the roundness */
+            margin-top: 10px; /* Space between the Create Project button and the project list */
         }
+
+            button:hover {
+                background-color: #45a049; /* Darker color on hover */
+            }
 
         #projectList {
             margin-top: 20px;
@@ -41,12 +53,24 @@
                 border: 1px solid #ccc;
                 padding: 10px;
                 margin-bottom: 10px;
+                border-radius: 5px; /* Adjust the value to control the roundness */
             }
+
+            #projectList button {
+                margin-top: 5px; /* Adjust the value to control the space between Edit and Delete buttons */
+                margin-right: 5px; /* Adjust the value to control the space between Edit and Delete buttons */
+                border-radius: 3px; /* Adjust the value to control the roundness of Edit and Delete buttons */
+            }
+
+                #projectList button:hover {
+                    background-color: #45a049; /* Darker color on hover */
+                }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("projectForm");
             const projectList = document.getElementById("projectList");
+            let projects = JSON.parse(localStorage.getItem("projects")) || [];
 
             form.addEventListener("submit", function (event) {
                 event.preventDefault();
@@ -67,35 +91,84 @@
                     costPerHour: costPerHour,
                 };
 
-                // Save project information to local storage
-                let projects = JSON.parse(localStorage.getItem("projects")) || [];
-                projects.push(projectInfo);
-                localStorage.setItem("projects", JSON.stringify(projects));
+                const selectedIndex = form.getAttribute("data-selected-index");
+                if (selectedIndex !== null) {
+                    // If there's a selected project index, update the project
+                    projects[selectedIndex] = projectInfo;
+                    form.removeAttribute("data-selected-index");
+                } else {
+                    // Otherwise, add a new project
+                    projects.push(projectInfo);
+                }
 
-                // Display project in the list
+                localStorage.setItem("projects", JSON.stringify(projects));
                 displayProjects();
+                form.reset();
+                updateButtonLabel("Create Project");
             });
 
             function displayProjects() {
                 projectList.innerHTML = "";
-                const projects = JSON.parse(localStorage.getItem("projects")) || [];
+                projects = JSON.parse(localStorage.getItem("projects")) || [];
 
                 projects.forEach((project, index) => {
                     const projectDiv = document.createElement("div");
                     projectDiv.innerHTML = `<strong>${project.name}</strong><br>
-                                                           Members: ${project.members}<br>
-                                                           Start: ${project.start}<br>
-                                                           Deadline: ${project.deadline}<br>
-                                                           Budget: ${project.budget}<br>
-                                                           Cost Per Hour: ${project.costPerHour}<br>`;
+                                                                       Members: ${project.members}<br>
+                                                                       Start: ${project.start}<br>
+                                                                       Deadline: ${project.deadline}<br>
+                                                                       Budget: ${project.budget}<br>
+                                                                       Cost Per Hour: ${project.costPerHour}<br>`;
+
+                    const editButton = document.createElement("button");
+                    editButton.textContent = "Edit";
+                    editButton.addEventListener("click", function () {
+                        editProject(index);
+                    });
+
+                    const deleteButton = document.createElement("button");
+                    deleteButton.textContent = "Delete";
+                    deleteButton.addEventListener("click", function () {
+                        deleteProject(index);
+                    });
+
+                    projectDiv.appendChild(editButton);
+                    projectDiv.appendChild(deleteButton);
+
                     projectList.appendChild(projectDiv);
                 });
             }
 
-            // Initial display of projects
+            function editProject(index) {
+                const projectToEdit = projects[index];
+                form.setAttribute("data-selected-index", index);
+
+                document.getElementById("projectName").value = projectToEdit.name;
+                document.getElementById("projectMembers").value = projectToEdit.members;
+                document.getElementById("projectStart").value = projectToEdit.start;
+                document.getElementById("projectDeadline").value = projectToEdit.deadline;
+                document.getElementById("projectBudget").value = projectToEdit.budget;
+                document.getElementById("costPerHour").value = projectToEdit.costPerHour;
+
+                updateButtonLabel("Update Project");
+            }
+
+            function deleteProject(index) {
+                projects.splice(index, 1);
+                localStorage.setItem("projects", JSON.stringify(projects));
+                displayProjects();
+                updateButtonLabel("Create Project");
+            }
+
+            function updateButtonLabel(label) {
+                const submitButton = document.querySelector("#projectForm button[type='submit']");
+                submitButton.textContent = label;
+            }
+
             displayProjects();
         });
     </script>
+
 </head>
 <body>
     <form id="projectForm">
