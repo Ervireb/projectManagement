@@ -3,43 +3,103 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - teamManagment</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"] - Team Management</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/teamManagment.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/teamManagement.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+    <style>
+        body {
+            height: 100%;
+            flex-direction: column;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            font: 1em/1.5 "Lato", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizelegibility;
+            font-size: 1.3em;
+        }
+
+            header h1, header h2 {
+                margin: 0;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header h2 {
+                text-transform: uppercase;
+                margin-top: -0.5em;
+                font-size: 1.5em;
+            }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 3;
+            background: #222;
+            display: flex;
+            justify-content: space-around;
+            padding: 30px 0;
+            border-bottom: 2px solid #d78f09
+        }
+
+            .navbar a {
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                font-size: 1.2em;
+                transition: background 0.3s, color 0.3s;
+            }
+
+                .navbar a:hover {
+                    background: #333;
+                }
+
+        .container {
+            flex: 1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 80px;
+        }
+
+        footer {
+            background-color: #0b0a0b;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+            color: #f5f5f5;
+            border-top: 2px solid #d78f09;
+            margin-top: auto; 
+        }
+
+            footer a {
+                color: #d78f09;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                footer a:hover {
+                    color: #f5f5f5;
+                }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Team Managment</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Calender">Calender</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/NewProject">NewProject</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/People">People</a>
-                        </li>                        
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li class="nav-item">
-                                <span class="nav-link text-dark">@User.Identity.Name</span>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Identity" asp-page="Account/Logout">Log out</a>
-                            </li>
-                        }
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar">
+            <a href="/Calender">Calender</a>
+            <a href="/NewProject">New Project</a>
+            <a href="/People">People</a>
+            <a href="/Index">HOME</a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <span>@User.Identity.Name</span>
+                <a href="/Identity/Account/Logout">Log out</a>
+            }
         </nav>
     </header>
     <div class="container">
@@ -47,17 +107,19 @@
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - teamManagment - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2023 - Team Management - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        function changeHeaderHeight(height) {
+            document.querySelector('header').style.height = `${height}vh`;
+        }
+    </script>
 </body>
 </html>

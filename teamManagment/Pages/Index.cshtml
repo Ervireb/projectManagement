@@ -12,17 +12,28 @@
     <title>Team Management System</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            font: 1em/1.5 "Lato", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizelegibility;
+            font-size: 1.3em;
         }
 
         header {
-            background-color: #3498db;
-            padding: 20px;
+        }
+        #headIMG{
+            background: url(https://unsplash.imgix.net/45/ZLSw0SXxThSrkXRIiCdT_DSC_0345.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=857f07b76abac23a7fb7161cc7b12a46) center no-repeat;
+            height: 30vh;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #fff;
-            text-align: center;
+            transition: height 0.3s; /* Add transition for smooth height change */
         }
 
         section {
@@ -34,10 +45,19 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
-            color: #3498db;
+        header h1, header h2 {
+            margin: 0;
         }
 
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header h2 {
+            text-transform: uppercase;
+            margin-top: -.5em;
+            font-size: 1.5em;
+        }
         p {
             line-height: 1.6;
         }
@@ -60,10 +80,14 @@
 </head>
 <body>
 
-    <header>
-        <h1>Team Management System</h1>
-        <p>Effortless collaboration and productivity for your team.</p>
+    <header id="headIMG">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Team Management</h1>
+            <h2>Your tagline goes here</h2>
+        </div>
     </header>
+    
 
     <section>
         <h2>Key Features</h2>

@@ -9,7 +9,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ... Your existing HTML and CSS ... -->
 
     <style>
         form {
@@ -17,7 +16,7 @@
             margin: 0 auto;
             border: 1px solid #ccc;
             padding: 20px;
-            border-radius: 10px; /* Adjust the value to control the roundness */
+            border-radius: 10px;
         }
 
         input {
@@ -27,7 +26,7 @@
             display: inline-block;
             border: 1px solid #ccc;
             box-sizing: border-box;
-            border-radius: 5px; /* Adjust the value to control the roundness */
+            border-radius: 5px;
         }
 
         button {
@@ -37,12 +36,12 @@
             border: none;
             cursor: pointer;
             width: 100%;
-            border-radius: 5px; /* Adjust the value to control the roundness */
-            margin-top: 10px; /* Space between the Create Project button and the project list */
+            border-radius: 5px;
+            margin-top: 10px;
         }
 
             button:hover {
-                background-color: #45a049; /* Darker color on hover */
+                background-color: #45a049;
             }
 
         #projectList {
@@ -53,17 +52,17 @@
                 border: 1px solid #ccc;
                 padding: 10px;
                 margin-bottom: 10px;
-                border-radius: 5px; /* Adjust the value to control the roundness */
+                border-radius: 5px;
             }
 
             #projectList button {
-                margin-top: 5px; /* Adjust the value to control the space between Edit and Delete buttons */
-                margin-right: 5px; /* Adjust the value to control the space between Edit and Delete buttons */
-                border-radius: 3px; /* Adjust the value to control the roundness of Edit and Delete buttons */
+                margin-top: 5px;
+                margin-right: 5px;
+                border-radius: 3px;
             }
 
                 #projectList button:hover {
-                    background-color: #45a049; /* Darker color on hover */
+                    background-color: #45a049;
                 }
     </style>
     <script>
@@ -77,6 +76,7 @@
 
                 const projectName = document.getElementById("projectName").value;
                 const projectMembers = document.getElementById("projectMembers").value;
+                const projectPerformer = document.getElementById("projectPerformer").value;
                 const projectStart = document.getElementById("projectStart").value;
                 const projectDeadline = document.getElementById("projectDeadline").value;
                 const projectBudget = document.getElementById("projectBudget").value;
@@ -93,11 +93,9 @@
 
                 const selectedIndex = form.getAttribute("data-selected-index");
                 if (selectedIndex !== null) {
-                    // If there's a selected project index, update the project
                     projects[selectedIndex] = projectInfo;
                     form.removeAttribute("data-selected-index");
                 } else {
-                    // Otherwise, add a new project
                     projects.push(projectInfo);
                 }
 
@@ -175,6 +173,9 @@
         <label for="projectName">Project Name:</label>
         <input type="text" id="projectName" required>
 
+        <label for="projectPerformer">Project performer:</label>
+        <input type="text" id="projectPerformer" required>
+
         <label for="projectMembers">Project Members:</label>
         <input type="text" id="projectMembers" required>
 
@@ -194,7 +195,6 @@
     </form>
 
     <div id="projectList">
-        <!-- Project information will be displayed here -->
     </div>
 </body>
 </html>
