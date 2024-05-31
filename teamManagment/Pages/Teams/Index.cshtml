@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Models.Team>
+
+<h2>Teams</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Team Name</th>
+            <th>Team Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var team in Model)
+        {
+            <tr>
+                <td>@team.Name</td>
+                <td>@team.Description</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@team.Id">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@team.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

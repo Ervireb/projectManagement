@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Models.Prooject>
+
+<h2>Proojects</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Prooject Name</th>
+            <th>Prooject Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Prooject in Model)
+        {
+            <tr>
+                <td>@Prooject.Name</td>
+                <td>@Prooject.Description</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@Prooject.Id">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@Prooject.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

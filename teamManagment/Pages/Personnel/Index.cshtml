@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Models.Personnel>
+
+<h2>Personnel</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Employee Name</th>
+            <th>Employee Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var personnel in Model)
+        {
+            <tr>
+                <td>@personnel.Name</td>
+                <td>@personnel.Email</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@personnel.Id">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@personnel.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
