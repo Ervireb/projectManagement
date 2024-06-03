@@ -12,6 +12,9 @@ builder.Services.AddDbContext<teamManagmentContext>(options =>
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<teamManagmentContext>();
 
+builder.Services.AddDbContext<IssueDbContext>(
+    o => o.UseSqlServer(builder.Configuration.GetConnectionString("SQLServer"));
+
 
 var app = builder.Build();
 
