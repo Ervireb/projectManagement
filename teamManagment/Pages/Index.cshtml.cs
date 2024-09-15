@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 
-namespace teamManagment.Pages
+namespace teamManagment.Pages // Make sure the namespace matches
 {
     public class IndexModel : PageModel
     {
@@ -12,9 +12,12 @@ namespace teamManagment.Pages
             _logger = logger;
         }
 
+        // Add the 'Message' property
+        public string Message { get; private set; }
+
         public void OnGet()
         {
-
+            Message = "Your application description page.";
         }
     }
 }
