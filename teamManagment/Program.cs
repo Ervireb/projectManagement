@@ -6,7 +6,7 @@ using teamManagment.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container
 builder.Services.AddRazorPages();
 builder.Services.AddControllers().AddNewtonsoftJson();
 
@@ -16,16 +16,18 @@ builder.Services.AddDbContext<teamManagmentContext>(options =>
     ?? throw new InvalidOperationException("Connection string 'teamManagmentContext' not found.")));
 
 builder.Services.AddDbContext<IssueDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServer"))); // Configure IssueDbContext
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServer")));
 
 builder.Services.AddDbContext<TodoContext>(opt =>
     opt.UseInMemoryDatabase("TodoList")); // Configure TodoContext with In-Memory Database
 
+// Add Identity and scoped services
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<teamManagmentContext>();
 
-builder.Services.AddControllersWithViews(); // Add MVC services
+// Add Controllers with Views
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
@@ -36,7 +38,7 @@ using (var scope = app.Services.CreateScope())
     SeedData.Initialize(services); // Seed data only once
 }
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
@@ -47,13 +49,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.MapRazorPages(); // Map Razor Pages
-
-// Configure endpoints for controllers
-app.MapControllers();
+app.MapControllers(); // Map Controllers
 
 // Add default controller route
 app.MapControllerRoute(
