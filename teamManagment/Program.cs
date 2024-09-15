@@ -8,22 +8,28 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddControllers().AddNewtonsoftJson();
+
+// Configure DbContexts
 builder.Services.AddDbContext<teamManagmentContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("teamManagmentContext")
     ?? throw new InvalidOperationException("Connection string 'teamManagmentContext' not found.")));
+
+builder.Services.AddDbContext<IssueDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServer"))); // Configure IssueDbContext
+
+builder.Services.AddDbContext<TodoContext>(opt =>
+    opt.UseInMemoryDatabase("TodoList")); // Configure TodoContext with In-Memory Database
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<teamManagmentContext>();
 
-// Fix missing parenthesis
-builder.Services.AddDbContext<IssueDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServer"))); // Fixed line
-
 builder.Services.AddControllersWithViews(); // Add MVC services
 
 var app = builder.Build();
 
+// Seed initial data
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -44,9 +50,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapRazorPages(); // Map Razor Pages
 
-// Add controller route
+// Configure endpoints for controllers
+app.MapControllers();
+
+// Add default controller route
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
@@ -59,7 +68,7 @@ using (var scope = app.Services.CreateScope())
 
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-    SeedData.Initialize(scope.ServiceProvider); // This can be removed if you only want to seed once
+    SeedData.Initialize(scope.ServiceProvider); // Seed data for development
 }
 #endif
 
