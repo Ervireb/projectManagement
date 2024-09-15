@@ -1,5 +1,5 @@
 ﻿using Moq;
-using teamManagment.Pages; // Ensure this is your correct namespace
+using teamManagment.Pages;
 using Xunit;
 
 public class IndexPageTests
