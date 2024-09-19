@@ -6,7 +6,7 @@ namespace teamManagment.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class ProductsControllerTests : ControllerBase
     {
         // Make 'products' readonly since it does not change after initialization
         private static readonly List<Product> products = new()
