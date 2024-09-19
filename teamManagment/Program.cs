@@ -49,10 +49,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
 app.UseAuthorization();
 
-app.MapRazorPages(); // Map Razor Pages
-app.MapControllers(); // Map Controllers
+// Register routes at top-level
+app.MapRazorPages();    // Map Razor Pages
+app.MapControllers();   // Map Controllers
 
 // Add default controller route
 app.MapControllerRoute(
