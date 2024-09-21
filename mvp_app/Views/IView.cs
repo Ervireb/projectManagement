@@ -8,6 +8,6 @@ namespace mvp_app.Views
 {
     public interface IView
     {
-        void DisplayData(string data);
+        void DisplayData(string data, float fontSize);
     }
 }

@@ -23,7 +23,7 @@ namespace mvp_app.Presenters
         public void LoadData()
         {
             _model.LoadData(); // Загружаем данные из модели
-            _view.DisplayData(_model.Data); // Отображаем данные через представление
+            _view.DisplayData(_model.Data, 14f); // Отображаем данные через представление
         }
     }
 }

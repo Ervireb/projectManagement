@@ -33,31 +33,35 @@ namespace mvp_app
             switch (clickCount)
             {
                 case 1:
-                    DisplayData("Hello, MVP!"); break;
+                    DisplayData("Hello, MVP!", 14f); break;
                 case 2:
-                    DisplayData("Котики — это милые домашние животные."); break;
+                    DisplayData("Котики — это милые домашние животные. Они известны своей независимостью и игривым характером. Котики могут быть разного цвета и породы.", 12f); break;
                 case 3:
-                    DisplayData("Они известны своей независимостью и игривым характером."); break;
+                    DisplayData("/ᐠ｡ꞈ｡ᐟ\\", 32f); break;
                 case 4:
-                    DisplayData("Котики могут быть разного цвета и породы."); break;
-                case 5:
-                    DisplayData("/ᐠ｡ꞈ｡ᐟ\\");break;
-                case 6:
-                    DisplayData("ᓚᘏᗢ"); break;
+                    DisplayData("ᓚᘏᗢ", 46f); break; // ᗢᘗᓗ
                 default:
-                    DisplayData("( ⓛ ω ⓛ *)"); break;
+                    DisplayData("( ⓛ ω ⓛ *)", 32f); break;
             }
         }
 
-        public void DisplayData(string data)
+
+
+        public void DisplayData(string data, float fontSize)
         {
             textBoxInfo.Text = data; // Отображение данных в текстовом поле
+            textBoxInfo.Font = new Font(textBoxInfo.Font.FontFamily, fontSize);
         }
         private void textBoxInfo_TextChanged(object sender, EventArgs e)
         {
             // Здесь можно добавить логику, которая будет выполняться при изменении текста
             // например
             // MessageBox.Show("Текст изменён: " + textBoxInfo.Text);
+        }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

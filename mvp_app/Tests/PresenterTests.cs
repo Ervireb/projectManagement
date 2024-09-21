@@ -32,7 +32,7 @@ namespace mvp_app.Tests
             //presenter.LoadData(); // Метод, который вы должны реализовать в презентере для загрузки данных
 
             // Assert
-            mockView.Verify(v => v.DisplayData(expectedData), Times.Exactly(1));
+            mockView.Verify(v => v.DisplayData(expectedData, It.IsAny<float>()), Times.Exactly(1));
         }
 
         private readonly IView _view; // Поле для хранения ссылки на представление
@@ -42,7 +42,7 @@ namespace mvp_app.Tests
         public void LoadData()
         {
             _model.LoadData(); // Загружаем данные из модели
-            _view.DisplayData(_model.Data); // Отображаем данные через представление
+            _view.DisplayData(_model.Data, 14f); // Отображаем данные через представление
         }
     }
 }
