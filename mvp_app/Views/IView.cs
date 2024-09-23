@@ -9,5 +9,8 @@ namespace mvp_app.Views
     public interface IView
     {
         void DisplayData(string data, float fontSize);
+
+        int SelectedItemId { get; set; }
+        string SelectedItemTitle { get; set; }
     }
 }

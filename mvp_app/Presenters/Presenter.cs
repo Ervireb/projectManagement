@@ -25,5 +25,20 @@ namespace mvp_app.Presenters
             _model.LoadData(); // Загружаем данные из модели
             _view.DisplayData(_model.Data, 14f); // Отображаем данные через представление
         }
+
+        public void SelectItem(Model selectedItem)
+        {
+            if (selectedItem == null)
+            {
+                _view.SelectedItemId = 0;
+                _view.SelectedItemTitle = "";
+            }
+            else
+            {
+                _view.SelectedItemId = selectedItem.Id;
+                _view.SelectedItemTitle = selectedItem.Title;
+            }
+        }
+
     }
 }
