@@ -8,11 +8,33 @@ public class ProductsControllerTests : IClassFixture<CustomWebApplicationFactory
     private readonly HttpClient _client;
     private readonly CustomWebApplicationFactory<Program> _factory;
 
-    public ProductsControllerTests(CustomWebApplicationFactory<Program> factory)
+    public class CustomWebApplicationFactory<TStartup> : WebApplicationFactory<TStartup>
+        where TStartup : class
     {
-        _factory = factory;
-        _client = _factory.CreateClient();
+        private readonly Action<IApplicationBuilder> _configureApp;
+
+        public CustomWebApplicationFactory(Action<IApplicationBuilder> configureApp)
+        {
+            _configureApp = configureApp;
+        }
+
+        protected override void ConfigureWebHost(IWebHostBuilder builder)
+        {
+            builder.ConfigureServices(services =>
+            {
+                // Настройка сервисов
+            });
+
+            builder.Configure(app =>
+            {
+                // Вызов переданной функции для настройки приложения
+                _configureApp(app);
+
+                // Другая конфигурация приложения
+            });
+        }
     }
+
 
     [Fact]
     public async Task Get_EndpointsReturnSuccessAndCorrectContentType()
